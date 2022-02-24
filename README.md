@@ -5,7 +5,7 @@ QuantPerf: Portfolio analytics and performance calculation for financial data
 **QuantPerf** Python library that performs portfolio profiling, allowing quants and portfolio managers to understand their performance better by providing them with in-depth analytics and risk metrics.
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 1. ``quantperf.report.perf`` - for calculating various performance metrics, like Sharpe ratio, Win rate, Volatility, etc.
 
 2. ``quantperf.report.total_return_chart`` - for calculating total_return of DataSeries
