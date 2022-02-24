@@ -6,9 +6,9 @@ QuantPerf: Portfolio analytics and performance calculation for financial data
 
 
 
-1. ``quantperf.report.perf`` - for calculating various performance metrics, like Sharpe ratio, Win rate, Volatility, etc.
+1. ``quant_performance.report.perf`` - for calculating various performance metrics, like Sharpe ratio, Win rate, Volatility, etc.
 
-2. ``quantperf.report.total_return_chart`` - for calculating total_return of DataSeries
+2. ``quant_performance.report.total_return_chart`` - for calculating total_return of DataSeries
 
 Here's an example of a simple tear sheet analyzing a strategy:
 
@@ -17,7 +17,7 @@ Quick Start
 
 .. code:: python
 
-    from quantperf.report import perf
+    from quant_performance.report import perf
 
     # fetch the daily returns for a stock
      df = pd.read_csv("./test_data/test_data.csv",parse_dates=['Date'] , index_col='Date')
@@ -97,7 +97,7 @@ Install using ``pip``:
 
 .. code:: bash
 
-    $ pip install quantperf --upgrade --no-cache-dir
+    $ pip install quant_performance --upgrade --no-cache-dir
 
 
 Requirements

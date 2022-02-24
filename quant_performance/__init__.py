@@ -1,5 +1,5 @@
 """
-quantperf.
+quant_performance.
 
 An example python library.
 """
