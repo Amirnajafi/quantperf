@@ -1,11 +1,12 @@
 import numpy as np
-from datetime import timedelta
 import pandas as pd
+from datetime import timedelta
 
 
 def perf(df  , risk_free = 0.01):
     try:
-        df = pd.DataFrame(df , index = df.index , columns = ['nav'])
+        
+        df = pd.DataFrame({ "nav" : df.values} , index=df.index  , columns = ['nav'])
         df["fund_return"]  = df['nav'].pct_change()
         df["total_return"] = ((df['nav'] - df['nav'].iloc[0]) / df['nav'].iloc[0])
 
@@ -113,7 +114,8 @@ def createChart(df):
 
 def total_return_chart(df):
     try:
-        df = pd.DataFrame(df , index = df.index , columns = ['nav'])
+        df = pd.DataFrame({ "nav" : df.values} , index=df.index  , columns = ['nav'])
+
         df["fund_return"]  = df['nav'].pct_change()
         df["total_return"] = ((df['nav'] - df['nav'].iloc[0]) / df['nav'].iloc[0])
         total_return = createChart(df["total_return"] * 100)
@@ -123,10 +125,12 @@ def total_return_chart(df):
         print(e)
 
 
-# Test data
-# try:
-#     df = pd.read_csv("./test_data/test_data.csv",parse_dates=['Date'] , index_col='Date')
-#     data , df2 = perf(df['Close'])
-#     pprint(data)
-# except Exception as e:
-#     print(e)
+# def test():
+#     # Test data
+#     try:
+#         df = pd.read_csv("./test_data/test_data.csv",parse_dates=['Date'] , index_col='Date')
+#         # print(df)
+#         data , df2 = perf(df['Close'])
+#     except Exception as e:
+#         print(e)
+# test()
